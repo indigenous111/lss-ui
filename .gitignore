@@ -102,3 +102,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Custom
+**/.settings/
+**/node_installation/
+**/target/
+*.classpath
+*.project
+**/node_modules/
+**/.idea/
+**/dist/
