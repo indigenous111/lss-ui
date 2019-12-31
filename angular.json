@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "last-shelter-ui"
+    }
+  },
+  "defaultProject": "last-shelter-ui",
+  "schematics": {
+    "@schematics/angular:packageManager": "yarn"
+  }
 }
