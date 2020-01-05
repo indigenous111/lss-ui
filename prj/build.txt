@@ -1,0 +1,45 @@
+## NG Commands ##
+Component	ng g component my-new-component
+Directive	ng g directive my-new-directive
+Pipe	ng g pipe my-new-pipe
+Service	ng g service my-new-service
+Class	ng g class my-new-class
+Guard	ng g guard my-new-guard
+Interface	ng g interface my-new-interface
+Enum	ng g enum my-new-enum
+Module	ng g module my-module
+
+## NG BUILD ##
+# these are equivalent 
+ng build --target=production --environment=prod
+ng build --prod --env=prod
+ng build --prod
+# and so are these 
+ng build --target=development --environment=dev
+ng build --dev --e=dev
+ng build --dev
+ng build
+
+## NPM UPGRADE ##
+npm uninstall -g angular-cli
+npm install --cache /tmp/empty-cache
+npm install -g angular-cli@latest
+
+
+
+
+
+
+########### YARN 
+
+## To start
+yarn run start
+
+## To run available scripts
+yarn run
+
+## To install
+yarn add webpack@^4.6.0
+
+## To run the application
+ yarn run start --port 4200
