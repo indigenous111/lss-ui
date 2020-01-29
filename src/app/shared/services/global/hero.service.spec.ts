@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ManageserviceService } from './manageservice.service';
+import { HeroService } from './hero.service';
 
-describe('ManageserviceService', () => {
+describe('HeroService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: ManageserviceService = TestBed.get(ManageserviceService);
+    const service: HeroService = TestBed.get(HeroService);
     expect(service).toBeTruthy();
   });
 });

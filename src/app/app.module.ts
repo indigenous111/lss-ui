@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { LocationStrategy, HashLocationStrategy } from '../../node_modules/@angular/common';
 import { LsModule } from './ls/ls.module';
 import { GlobalModule } from './global/global.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 
 @NgModule({
   declarations: [
@@ -15,9 +18,14 @@ import { GlobalModule } from './global/global.module';
     BrowserModule,
     AppRoutingModule,
     LsModule,
-    GlobalModule
+    GlobalModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    SlimLoadingBarModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

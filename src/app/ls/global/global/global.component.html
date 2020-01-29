@@ -1,11 +1,10 @@
-<div style="color:yellow;background-color:green;align:left;font-weight:bold;font-size:12pt;"><h3>{{title}}</h3></div>
-<table style="width:100%; font-size:8pt; height: 25%;">
-  <tr>
-    <td> 
-    <ul style="list-style-type: none;  margin: 10;  padding: 10;">
-    <li><a [routerLink]="[{outlets: {'sub-menu':'glb/hero'}}]" style="text-decoration: none; color: yellow; background-color: green;">Heroes</a>
-    <li><a style="text-decoration: none; color: yellow; background-color: green;">Troops</a>
+<ng2-slim-loading-bar color="blue"></ng2-slim-loading-bar>
+<div style="color:blue;align:left;font-weight:bold;font-size:12pt;"><h3>{{title}}</h3></div>
+<nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a [routerLink]="'glb/hero'" class="nav-link">Heroes</a>
+        <li class="nav-item"><a class="nav-link">Troops</a>
     </ul>
-    </td>
-  </tr>
-</table>
+  </div>
+</nav>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ManageserviceService } from './manageservice.service';
+import { HeroService } from '../../../../../shared/services/global/hero.service';
+import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-manage',
@@ -8,17 +10,33 @@ import { ManageserviceService } from './manageservice.service';
 })
 export class ManageComponent implements OnInit {
 
-  heroTypes:string[];
+  heroTypes:string [];
 
+  addHeroTypeForm: FormGroup;
 
+  constructor(private glbHeroService:HeroService, private fb: FormBuilder) {
+    this.createForm();
+  }
 
-  constructor(private manageserviceService:ManageserviceService) {
-
+  createForm() {
+    this.addHeroTypeForm = this.fb.group({
+      Type: ['', Validators.required ]
+    });
   }
 
   ngOnInit() {
-    providers:[ManageserviceService]
-    this.heroTypes = this.manageserviceService.getHeroTypes();
+    providers:[HeroService]
+    try {
+       this.glbHeroService.getHeroTypes().subscribe( data => {
+
+         for(let heroType of data)
+         {
+           this.heroTypes.push(heroType.Type);
+         }
+       });
+    } catch(e) {
+      console.error('####### ' + e);
+    }
   }
 
 }
